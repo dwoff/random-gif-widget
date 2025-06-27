@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random GIF Widget</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <img id="gif" src="https://media.giphy.com/media/random/giphy.gif" alt="Random GIF" />
+  <script>
+    setInterval(() => {
+      document.getElementById("gif").src =
+        "https://media.giphy.com/media/random/giphy.gif?rand=" + Math.random();
+    }, 10000); // changes every 10 seconds
+  </script>
+</body>
+</html>
